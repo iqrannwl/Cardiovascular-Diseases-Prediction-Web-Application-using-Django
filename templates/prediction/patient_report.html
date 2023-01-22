@@ -1,0 +1,77 @@
+{%extends '../base.html'%}
+{%load static %}
+{%load static%}
+{%block title%}
+Pateint Report 
+{%endblock title%}
+{%block content%}
+
+<header class="bg-image">
+  <img src="{%static 'images/bg.png'%}" class="img-fluid" alt="">
+</header>
+
+<div class="container my-5 bg-transparent">
+    <h1 class="text-19b3bd my-5 text-center">Patient Report</h1>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                <h2 class="text-19b3bd">{{patient.name}}</h2>
+                <table class="table table-bordered text-white">
+                    <tr>
+                      <th>Age</th>
+                      <td>{{patient.age}}</td>
+                    </tr>
+                    <tr>
+                      <th>Sex</th>
+                      <td>{{patient.sex}}</td>
+                    </tr>
+                    <tr>
+                      <th>Chest Pain</th>
+                      <td>{{patient.cp}}</td>
+                    </tr>
+                    <tr>
+                      <th>Resting Blood Pressure in mm Hg</th>
+                      <td>{{patient.trestbps}}</td>
+                    </tr>
+                    <tr>
+                      <th>Serum Cholestoral in mg/dl</th>
+                      <td>{{patient.chol}}</td>
+                    </tr>
+                    <tr>
+                      <th>Fasting Blood Sugar > 120 mg/dl</th>
+                      <td>{{patient.fbs}}</td>
+                    </tr>
+                    <tr>
+                      <th>Resting ECG Results</th>
+                      <td>{{patient.restecg}}</td>
+                    </tr>
+                    <tr>
+                      <th>Maximum Heart Rate</th>
+                      <td>{{patient.max_heart_rate}}</td>
+                    </tr>
+                    <tr>
+                        <th>Exercise Induced Angina </th>
+                        <td>{{patient.exercise_angina}}</td>
+                  </tr>
+                  <tr>
+                      <th>ST Depression Induced</th>
+                      <td>{{patient.oldpeak}}</td>
+                  </tr>
+                    <tr>
+                        <th>Slope of the Peak Exercise ST Segment</th>
+                        <td>{{patient.slope}}</td>
+                    </tr>
+                </table>
+
+              </div>
+              <div class="col-sm-6">
+                <div class="my-5">
+                    <h2 class="text-center">{{patient.target}}</h2>
+                </div>
+              </div>
+          </div>
+      </div>
+</div>
+
+
+{%endblock content%}

@@ -1,0 +1,133 @@
+{%extends '../base.html'%}
+{%load static%}
+{%block title%}
+Prediction
+{%endblock title%}
+
+{%block content%}
+
+<header class="bg-image">
+    <img src="{%static 'images/bg.png'%}" class="img-fluid" alt="">
+ </header>
+
+<div class="container my-5 bg-transparent">
+      
+    <form method="POST">
+        {%csrf_token%}
+
+
+        <div class="container shadow my-5 py-4">
+            <div class="row gy-5 ">
+                <div class="col-sm-4">
+                    <label for="name">Name</label>
+                    <input type="text" class="my-3 form-control" id="name" name="name" required min="1" placeholder="Enter your name">
+                </div>
+                <div class="col-sm-4">
+                    <label for="age">Age</label>
+                    <input type="number" class="my-3 form-control" placeholder="Enter your age b/w 1 to 100" id="age" min="1" max="100" name="age" required min="1">
+                </div>
+
+
+                <div class="col-sm-4">
+                    <label for="sex">Sex</label>
+                    <select class="my-3 form-control bg-shadow" id="sex" name="sex" required>
+                        <option disabled selected value> -- Select an Option -- </option>
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row gy-5">
+                <div class="col-sm-4">
+                    <label for="cp">Chest Pain Type</label>
+                    <select class="my-3 form-control bg-shadow" id="cp" name="cp" required>
+                        <option disabled selected value> -- Select an Option -- </option>
+                        <option value="1">Typical Angina</option>
+                        <option value="2">Atypical Angina</option>
+                        <option value="3">Non-anginal Pain</option>
+                        <option value="4">Asymptomatic</option>
+                    </select>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <label for="trestbps">Resting Blood Pressure in mm Hg</label>
+
+                        <input type="number" class="my-3 form-control bg-shadow" id="trestbps" min="0" name="trestbps" required placeholder="Enter Value b/w 0 to 200" >
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="chol">Serum Cholestoral in mg/dl</label>
+                    <input type="number" class="my-3 form-control bg-shadow" id="chol" name="chol" min="0" required placeholder="Enter the value b/w 0 to 600">
+                </div>
+    
+            </div>
+
+            <div class="row ">
+                   
+                <div class="col-sm-4">
+                    <label for="fbs">Fasting Blood Sugar > 120 mg/dl</label>
+                    <select class="my-3 form-control bg-shadow" id="fbs" name="fbs" required>
+                        <option disabled selected value> -- Select an Option -- </option>
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="restecg">Resting ECG Results</label>
+                    <select class="my-3 form-control bg-shadow" id="restecg" name="restecg" required>
+                        <option disabled selected value> -- Select an Option -- </option>
+                        <option value="0">Normal</option>
+                        <option value="1">Having ST-T wave abnormality </option>
+                        <option value="2"> Probable or definite left ventricular hypertrophy </option>
+                    </select>
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="max_heart_rate">Maximum Heart Rate</label>
+                        <input type="number" class="my-3 form-control bg-shadow" min="0" id="max_heart_rate" name="max_heart_rate" required placeholder="Enter the value b/w 60 to 200">
+                </div>
+
+            </div>
+
+            <div class="row ">
+         
+              
+                <div class="col-sm-4">
+                    <label for="exang">Exercise Angina</label>
+                    <select class="my-3 form-control bg-shadow" id="exang" name="exang" required>
+                        <option disabled selected value> -- Select an Option -- </option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="exang">ST Depression Induced</label>
+                    <input type="number" step="any" class="my-3 form-control bg-shadow" min="0" id="oldpeak" name="oldpeak" placeholder="enter value b/w 0.0 to 6.0"
+                        required>
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="slope">Slope of the Peak Exercise ST Segment </label>
+                        <select class="my-3 form-control bg-shadow" id="slope" name="slope" required>
+                            <option disabled selected value> -- Select an Option -- </option>
+                            <option value="0">Upsloping</option>
+                            <option value="1">Flat</option>
+                            <option value="2">Downsloping</option>
+                        </select>
+                </div>
+            </div>
+            <input class="btn btn-warning btn-lg float-center px-5 " type="submit">
+        </div>
+
+</form>
+
+
+</div>
+
+
+
+{%endblock content%}

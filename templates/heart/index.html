@@ -1,0 +1,227 @@
+{%extends '../base.html'%}
+{%load static%}
+{%block title%}
+Home
+{%endblock title%}
+{%block content%}
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-12">
+                <div class="container mt-5">
+                    <h1 class="text-dark">Cardiovacular Disease Prediction System</h1>
+                    <p class="text-dark">Cardiovascular diseases (CVDs) or heart disease are the number one cause of death globally with
+                        17.9 million death cases each year. CVDs are concertedly contributed by hypertension, diabetes,
+                        overweight and unhealthy lifestyles. You can read more on the heart disease statistics and
+                        causes for self-understanding.
+                    </p>
+                    <a href="{%url 'cardio'%}" class="btn btn-warning text-white">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container my-5">
+    <div class="card-group">
+        <div class="card shadow border-0 box3 bg-warning py-5">
+          <i class="fa-solid fa-heart-pulse fa-4x text-white"></i>
+          <div class="card-body">
+           <h2 class="card-title">UROLOGY CARE</h2>
+            <p class="card-text">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis
+                suscipit ultrices.</p>
+          </div>
+        </div>
+        <div class="card shadow border-0 box1 bg-warning mx-3 py-5">
+          <i class="fa-solid fa-heart-pulse fa-4x text-white"></i>
+          <div class="card-body">
+           <h2 class="card-title">CARDIOLOGY CARE</h2>
+            <p class="card-text">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis
+                suscipit ultrices.</p>
+          </div>
+        </div>
+        <div class="card box2 shadow border-0 bg-warning py-5">
+          <i class="fa-solid fa-heart-pulse fa-4x text-white"></i>
+          <div class="card-body">
+           <h2 class="card-title">NEUROLOGY CARE</h2>
+            <p class="card-text">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis
+                suscipit ultrices.</p>
+          </div>
+        </div>
+      </div>
+  
+</div>
+
+<div class="container my-5 py-5 shadow">
+    <div class="text-center">
+        <h2 class="my-5">A MODERN, FULL-SERVICE PHARMACY
+        </h2>
+        <p class="my-5">At Medicine Center Compounding Pharmacy, we believe health is not just the absence of disease, but a
+            state of immense vitality. It is our mission to help you feel better, live longer, and become the best
+            possible you!</p>
+    </div>
+</div>
+<section class="pharmacy bg-warning py-5">
+
+
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="pharmacy-container">
+                    <div class="row">
+                        <div class="col-sm-12 mb-4 mt-5">
+                            <div class="pharmacy-content">
+                                
+                                <div class="i-content">
+                                    <h2>NEUROLOGICAL</h2>
+                                    <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+                                        justo
+                                        sagittis suscipit ultrices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mb-4 my-5">
+                            <div class="pharmacy-content">
+                                
+                                <div class="i-content">
+                                    <h2>CARDIOLOGY CARE</h2>
+                                    <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+                                        justo
+                                        sagittis suscipit ultrices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 mb-4 my-5">
+                            <div class="pharmacy-content">
+                                
+                                <div class="i-content">
+                                    <h2>CARDIOLOGY CARE</h2>
+                                    <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+                                        justo
+                                        sagittis suscipit ultrices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <img src="{%static 'images/1.jpeg'%}" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="department my-5 shadow py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-sm-3 col-sm-6 col-md-6 col-lg-6">
+                <h1 class="text-center">OUR DEPARTMENT</h1>
+                <p class="text-center">
+                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-warning my-5 shadow">
+        <div class="container mt-5 text-center py-5">
+            <div class="row mx-auto">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-white"> <i class="fa-solid fa-heart-pulse fa-4x" ></i><span>UROLOGY CARE</span><i class="fa-solid fa-heart-pulse fa-4x" ></i><span>NEUROLOGY CARE</span> 
+                <i class="fa-solid fa-heart-pulse fa-4x" ></i><span>CARDIOLOGY CARE</span> </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="info-section my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img src="{%static 'images/2.jpeg'%}" class="img-fluid" alt="">
+            </div>
+            <div class="offset-sm-1 col-sm-5 col-md-5 col-lg-5 mt-5">
+                <h2 class="py-2 text-white">CARE OF HEART</h2>
+                <p class="text-white">
+                    For nearly 25 years, thousands of medical practitioners throughout the state of Utah have exclusively referred patients to Medicine Center Compounding Pharmacyfor their compounded medications. This is due to the combination of outstanding service, price, and quality. At Medicine Center, quality is paramount. For that reason, we use cutting edge technology, state-of-the-art equipment, innovative bases and some of the most unique dosage forms our industry has to offer.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="Doctors" class="department my-5 shadow py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-sm-3 col-sm-6 col-md-6 col-lg-6">
+                <h1 class="text-center">OUR DOCTORS</h1>
+                <p class="text-center">
+                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-5">
+   
+        <div class="container my-5">
+            {%if doctors%}
+            <div class="row">
+                {%for d in doctors%}
+                <div class="col-sm-4">
+                    <div class="card rounded-0" style="width: 20rem;">
+                        <img src="{{d.image.url}}" class="card-img-top rounded-0" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title text-dark">{{d.name}}</h5><small>{{d.spciality}} Specialist</small>
+                          <p class="card-text text-justify text-dark">{{d.desc|truncatewords:20}}</p>
+                          <a href="{%url 'doctors_detail' d.id%}" class="btn btn-warning rounded-0">More</a>
+                        </div>
+                      </div>
+                </div>
+                {%endfor%}
+            </div>
+            {%endif%}
+        </div>
+    </div>
+</section>
+
+
+<section id="Article" class="department my-5 shadow py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-sm-3 col-sm-6 col-md-6 col-lg-6">
+                <h1 class="text-center">LATEST ARTICLES</h1>
+                <p class="text-center">
+                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-5">
+   
+        <div class="container my-5">
+            {%if articles%}
+            <div class="row">
+                {%for d in articles%}
+                <div class="col-sm-4">
+                    <div class="card rounded-0" style="height:400px !important;">
+                        <img src="{{d.image.url}}" class="" height="200px" width="100%" alt="...">
+                        <div class="card-body">
+                          
+                          <p class="card-text text-justify text-dark">{{d.desc|truncatewords:20}}</p>
+                          <a href="{%url 'detail_article' d.id%}" class="btn btn-warning">More</a>
+                        </div>
+                      </div>
+                </div>
+                {%endfor%}
+            </div>
+            {%endif%}
+        </div>
+    </div>
+</section>
+
+{%endblock content%}

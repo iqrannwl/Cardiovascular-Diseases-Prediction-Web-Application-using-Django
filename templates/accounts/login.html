@@ -1,0 +1,20 @@
+{%extends "../base.html"%}
+{%load static%}
+{%block title%}
+Login
+{%endblock title%}
+{%block content%}
+<header class="bg-image">
+    <img src="{%static 'images/bg.png'%}" class="img-fluid" alt="">
+ </header>
+
+<div class="container my-5">
+    <div class="col-sm-4 offset-sm-4">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form}}
+            <input type="submit" class="btn btn-warning mt-3" value="Login">
+        </form>
+    </div>
+</div>
+{%endblock content%}

@@ -1,0 +1,97 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="{%static 'css/all.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+
+    <title>
+        {%block title%}
+        {%endblock title%}
+    </title>  
+</head>
+  <body class="bg-dark text-white">
+
+
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-white" href="#">CARDIOLOGY <span class="text-warning">CARE</span></a>
+          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active  text-white" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{%url 'about'%}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{%url 'prediction'%}">Prediction</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Departments
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-white bg-dark" href="#">UROLOGY CARE</a></li>
+                  <li><a class="dropdown-item text-white bg-dark" href="#">NEUROLOGY CARE</a></li>
+                  <li><hr class="dropdown-divider bg-dark"></li>
+                  <li><a class="dropdown-item text-white bg-dark" href="#">CARDIOLOGY CARE</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white"  href="{%url 'doctors'%}">Doctors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{%url 'article'%}">Articles</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{%url 'logout_view'%}">logout</a>
+              </li>
+              {%else%}
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{%url 'login'%}">Login</a>
+              </li>
+              {%endif%}
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contacts</a>
+              </li>
+            
+           
+            </ul>
+         
+          </div>
+        </div>
+      </nav>
+    {%block content%}
+    {%endblock content%}
+
+<footer class="bg-black">
+  <div class="container text-white py-5 ">
+    <div class="row gy-5">
+      <div class="col-sm-4 text-start">
+        <h5>CARDIOLOGY CARE</h5>
+      </div>
+      <div class="col-sm-4 text-center">WEB SITE DESIGN BY &copy; MUHAMMAD IQRAN</div>
+      <div class="col-sm-4 text-end">
+        <a href="#"><i class="fab fa-facebook text-warning mx-2"></i></a>
+        <a href="#"><i class="fab fa-instagram text-warning mx-2"></i></a>
+        <a href="#"><i class="fab fa-linkedin text-warning mx-2"></i></a>
+        <a href="#"><i class="fab fa-twitter text-warning mx-2"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{%static 'js/all.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

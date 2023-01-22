@@ -1,0 +1,31 @@
+{%extends "../base.html"%}
+{%load static%}
+{%block title%}
+Articles
+{%endblock title%}
+
+{%block content%}
+<header class="bg-image">
+  <img src="{%static 'images/bg.png'%}" class="img-fluid" alt="">
+</header>
+<div class="container my-5">
+    {%if article%}
+    <div class="row">
+      
+        <div class="col-sm-4">
+           
+                <img src="{{article.image.url}}" class="card-img-top" alt="...">
+              
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <h2>{{article.title}}</h2>
+                    <p class="card-text text-justify">{{article.desc}}</p>
+                    Publish_by: <a href="#">{{article.publish_by}}</a>
+                  </div>
+              </div>
+        </div>
+        </div>
+    {%endif%}
+</div>
+{%endblock content%}

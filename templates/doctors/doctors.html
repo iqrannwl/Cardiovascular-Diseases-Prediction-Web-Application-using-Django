@@ -1,0 +1,33 @@
+{%extends "../base.html"%}
+{%load static%}
+{%block title%}
+Doctors
+{%endblock title%}
+
+{%block content%}
+
+<header class="bg-image">
+    <img src="{%static 'images/bg.png'%}" class="img-fluid" alt="">
+ </header>
+
+<div class="container my-5">
+    {%if object_list%}
+    <div class="row">
+        {%for d in object_list%}
+        <div class="col-sm-4">
+            <div class="card rounded-0" style="width: 20rem;">
+                <img src="{{d.image.url}}" class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-dark">{{d.name}}</h5><small>{{d.spciality}} Specialist</small>
+                  <p class="card-text text-justify text-dark">{{d.desc|truncatewords:20}}</p>
+                  <a href="{%url 'doctors_detail' d.id%}" class="btn btn-warning rounded-0">More</a>
+                </div>
+              </div>
+        </div>
+        {%endfor%}
+    </div>
+    {%endif%}
+</div>
+
+
+{%endblock content%}

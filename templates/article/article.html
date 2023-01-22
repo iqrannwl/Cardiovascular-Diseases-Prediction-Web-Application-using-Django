@@ -1,0 +1,30 @@
+{%extends "../base.html"%}
+{%load static%}
+{%block title%}
+Articles
+{%endblock title%}
+
+{%block content%}
+
+<header class="bg-image">
+    <img src="{%static 'images/bg.png'%}" class="img-fluid" alt="">
+ </header>
+<div class="container my-5">
+    {%if object_list%}
+    <div class="row">
+        {%for d in object_list%}
+        <div class="col-sm-4">
+            <div class="card rounded-0" style="height: 400px !important;">
+                <img src="{{d.image.url}}" class="" height="200px" width="100%" alt="...">
+                <div class="card-body">
+                  
+                  <p class="card-text text-justify text-dark">{{d.desc|truncatewords:20}}</p>
+                  <a href="{%url 'detail_article' d.id%}" class="btn btn-warning rounded-0">More</a>
+                </div>
+              </div>
+        </div>
+        {%endfor%}
+    </div>
+    {%endif%}
+</div>
+{%endblock content%}
